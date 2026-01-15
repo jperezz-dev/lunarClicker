@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:lunar-clicker": "node dist/lunar-clicker/server/server.mjs",
-    "electron": "ng build && electron ."
+    "electron": "ng build --base-href ./ && electron ."
   },
   "prettier": {
     "printWidth": 100,

@@ -10,7 +10,7 @@ function createWindow() {
     }
   });
 
-  win.loadFile(path.join(__dirname, 'dist/lunar-clicker/browser/index.html'));
+  win.loadURL(`file://${path.join(__dirname, 'dist/lunar-clicker/browser/index.html')}`);
 }
 
 app.whenReady().then(createWindow);
