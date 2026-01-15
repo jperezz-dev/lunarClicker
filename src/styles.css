@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'PressStart2P-Regular';
+    src: url('./assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf') format('truetype');
+}
+
+html {
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+  font-size: 5px;
+}
+
+@media (min-width: 2500px) {
+  html {
+    font-size: 6.5px;
+  }
+}
+
+app-root {
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+/* Assets */
+.logo {
+  height: 100%;
+  width: 65%;
+  background-image: url(./assets/images/logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
