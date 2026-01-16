@@ -85,8 +85,8 @@ main {
 
 #contadorClicks {
   background-image: url('../../../assets/images/contadorClicks.svg');
-  height: 45%;
-  width: 15.5%;
+  height: 60%;
+  width: 21%;
   background-repeat: no-repeat;
   margin-left: 2%;
   color: white;
@@ -110,8 +110,8 @@ main {
 
 #contadorTiempo {
   background-image: url('../../../assets/images/contadorTiempo.svg');
-  height: 45%;
-  width: 15.5%;
+  height: 60%;
+  width: 21%;
   background-repeat: no-repeat;
   color: white;
   font-family: 'PressStart2P-Regular';
@@ -121,5 +121,23 @@ main {
   align-items: center;
   font-size: 40px;
   -webkit-text-stroke: 0.05em;
-  -webkit-text-stroke-color: #534C70;
+  -webkit-text-stroke-color: #534c70;
+}
+
+@media (min-width: 2500px) {
+  #contadorClicks {
+    height: 45%;
+    width: 15.5%;
+    font-size: 32px;
+    -webkit-text-stroke: 0.3em;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.23);
+  }
+
+  #contadorTiempo {
+    height: 45%;
+    width: 15.5%;
+    font-size: 40px;
+    -webkit-text-stroke: 0.05em;
+    -webkit-text-stroke-color: #534c70;
+  }
 }

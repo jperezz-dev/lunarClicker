@@ -28,7 +28,7 @@ export class Juego implements OnInit, OnDestroy {
   // Opciones del init (Loop, volumen y error)
   ngOnInit() {
     this.musica.loop = true;
-    this.musica.volume = 0.15;
+    this.musica.volume = 0.05;
     this.reproducirMusica();
     this.iniciarTiempoJuego();
   }
@@ -41,7 +41,7 @@ export class Juego implements OnInit, OnDestroy {
   sumarClick() {
     // Sonido al click
     const sonidoLunarCopia = this.sonidoClickLunar.cloneNode() as HTMLAudioElement;
-    sonidoLunarCopia.volume = 0.6;
+    sonidoLunarCopia.volume = 0.4;
     sonidoLunarCopia.play();
     // Suma al contador
     this.contadorClicks++;

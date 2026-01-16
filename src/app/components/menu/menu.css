@@ -47,8 +47,8 @@ main {
 
 /* Icono sonido*/
 #iconoSonido {
-  height: 80%;
-  width: 5%;
+  height: 90%;
+  width: 5.5%;
   background-size: cover;
   background-repeat: no-repeat;
   margin-right: 2.5%;
@@ -72,12 +72,6 @@ main {
   cursor: pointer;
 }
 
-@media (min-width: 2500px) {
-  .boton {
-    font-size: 35px;
-  }
-}
-
 .boton:hover {
   transform: scale(1.02);
 }
@@ -85,4 +79,15 @@ main {
 #botonSalir {
   width: 34%;
   margin-top: 2%;
+}
+
+@media (min-width: 2500px) {
+  .boton {
+    font-size: 35px;
+  }
+
+  #iconoSonido {
+    height: 80%;
+    width: 5%;
+  }
 }
