@@ -1,14 +1,17 @@
 <main>
   <div id="contenedor">
-      <div id="contenedorSuperior">
-        <span id="iconoSonido" class="sonidoOn"></span>
-      </div>
-      <div id="contenedorCentral">
-        <span class="logo"></span>
-      </div>
-      <div id="contenedorBotones">
-        <button id="botonJugar" routerLink="/juego" class="boton">JUGAR</button>
-        <button id="botonSalir" class="boton">SALIR</button>
-      </div>
+    <div id="contenedorSuperior">
+      <span (click)="pausarMusica()" id="iconoSonido" [style.background-image]="musicaSonando 
+    ? 'url(assets/images/volumenOn.svg)' 
+    : 'url(assets/images/volumenOff.svg)'">
+      </span>
+    </div>
+    <div id="contenedorCentral">
+      <span class="logo"></span>
+    </div>
+    <div id="contenedorBotones">
+      <button id="botonJugar" routerLink="/juego" class="boton">JUGAR</button>
+      <button (click)="cerrarJuego()" id="botonSalir" class="boton">SALIR</button>
+    </div>
   </div>
 </main>
