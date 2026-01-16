@@ -1,0 +1,125 @@
+main {
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../../assets/images/fondo.svg);
+  background-size: cover;
+}
+
+#contenedor {
+  width: 100%;
+  height: 100%;
+  border: solid black 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Contenedores */
+#contenedorSuperior {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: solid 1px red;
+}
+
+#contenedorCentral {
+  width: 80%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px green;
+}
+
+#contenedorRunas {
+  width: 80%;
+  height: 20%;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px orange;
+}
+
+/* Componentes de juego */
+#contenedorLunar {
+  height: 100%;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  animation: float 6s ease-in-out infinite;
+}
+
+#luna {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../../../assets/images/luna.svg);
+  transform: translatey(0px);
+  cursor: pointer;
+}
+
+#luna:active {
+  transform: scale(0.95);
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+#contadorClicks {
+  background-image: url('../../../assets/images/contadorClicks.svg');
+  height: 45%;
+  width: 15.5%;
+  background-repeat: no-repeat;
+  margin-left: 2%;
+  color: white;
+  font-family: 'PressStart2P-Regular';
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  -webkit-text-stroke: 0.3em;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.23);
+}
+
+#textoJuego {
+  color: white;
+  font-family: 'PressStart2P-Regular';
+  text-align: center;
+  font-size: 32px;
+  width: 30%;
+}
+
+#contadorTiempo {
+  background-image: url('../../../assets/images/contadorTiempo.svg');
+  height: 45%;
+  width: 15.5%;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: 'PressStart2P-Regular';
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  -webkit-text-stroke: 0.05em;
+  -webkit-text-stroke-color: #534C70;
+}
