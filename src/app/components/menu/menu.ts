@@ -20,7 +20,7 @@ export class Menu implements OnInit, OnDestroy {
   // Opciones del init (Loop, volumen y error)
   ngOnInit() {
     this.musica.loop = true;
-    this.musica.volume = 0.5;
+    this.musica.volume = 0.35;
     this.reproducirMusica();
   }
 

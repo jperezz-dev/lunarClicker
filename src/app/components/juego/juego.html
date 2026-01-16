@@ -2,18 +2,23 @@
     <div id="contenedor">
         <div id="contenedorSuperior">
             <span id="contadorClicks">
-                302</span>
+                {{ contadorClicks }}</span>
             <p id="textoJuego">Haz click en la luna para acumular puntos y desbloquear runas lunares!</p>    
             <span id="contadorTiempo">
-                60s
-            </span>
+                {{ tiempoJuego }}s</span>
         </div>
         <div id="contenedorCentral">
             <div id="contenedorLunar">
-                <span id="luna"></span>
+                <span (click)="sumarClick()" id="luna"></span>
             </div>
         </div>
         <div id="contenedorRunas">
+            <span id="runa1" class="oculto"></span>
+            <span id="runa2" class="oculto"></span>
+            <span id="runa3" class="oculto"></span>
+            <span id="runa4" class="oculto"></span>
+            <span id="runa5" class="oculto"></span>
+            <span id="runa6" class="oculto"></span>
         </div>
     </div>
 </main>
