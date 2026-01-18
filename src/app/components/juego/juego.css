@@ -12,7 +12,6 @@ main {
 #contenedor {
   width: 100%;
   height: 100%;
-  border: solid black 1px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +24,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: solid 1px red;
 }
 
 #contenedorCentral {
@@ -34,17 +32,16 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 1px green;
 }
 
 #contenedorRunas {
   width: 80%;
   height: 20%;
-  justify-content: flex-start;
+  justify-items: center;
+  justify-content: space-evenly;
   align-items: center;
   display: flex;
-  flex-direction: column;
-  border: solid 1px orange;
+  flex-direction: row;
 }
 
 /* Componentes de juego */
@@ -140,4 +137,46 @@ main {
     -webkit-text-stroke: 0.05em;
     -webkit-text-stroke-color: #534c70;
   }
+}
+
+#runa1,
+#runa2,
+#runa3,
+#runa4,
+#runa5,
+#runa6 {
+  height: 65%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#runa1 {
+  background-image: url('../../../assets/images/runa1.svg');
+}
+
+#runa2 {
+  background-image: url('../../../assets/images/runa2.svg');
+}
+
+#runa3 {
+  background-image: url('../../../assets/images/runa3.svg');
+}
+
+#runa4 {
+  background-image: url('../../../assets/images/runa4.svg');
+}
+
+#runa5 {
+  background-image: url('../../../assets/images/runa5.svg');
+}
+
+#runa6 {
+  background-image: url('../../../assets/images/runa6.svg');
+}
+
+.oculto {
+  display: none;
+  visibility: hidden;
 }

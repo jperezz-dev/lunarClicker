@@ -51,6 +51,7 @@ export class Juego implements OnInit, OnDestroy {
     this.intervalo = setInterval(() => {
       if (this.tiempoJuego > 0) {
         this.tiempoJuego--;
+        this.cdr.detectChanges();
       } else {
         // Añadir finalización juego
       }

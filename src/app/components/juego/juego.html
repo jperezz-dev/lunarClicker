@@ -3,7 +3,7 @@
         <div id="contenedorSuperior">
             <span id="contadorClicks">
                 {{ contadorClicks }}</span>
-            <p id="textoJuego">Haz click en la luna para acumular puntos y desbloquear runas lunares!</p>    
+            <p id="textoJuego">Haz click en la luna para acumular puntos y desbloquear runas lunares!</p>
             <span id="contadorTiempo">
                 {{ tiempoJuego }}s</span>
         </div>
@@ -13,12 +13,12 @@
             </div>
         </div>
         <div id="contenedorRunas">
-            <span id="runa1" class="oculto"></span>
-            <span id="runa2" class="oculto"></span>
-            <span id="runa3" class="oculto"></span>
-            <span id="runa4" class="oculto"></span>
-            <span id="runa5" class="oculto"></span>
-            <span id="runa6" class="oculto"></span>
+            <span id="runa1" [class.oculto]="contadorClicks < 50"></span>
+            <span id="runa2" [class.oculto]="contadorClicks < 100"></span>
+            <span id="runa3" [class.oculto]="contadorClicks < 200"></span>
+            <span id="runa4" [class.oculto]="contadorClicks < 350"></span>
+            <span id="runa5" [class.oculto]="contadorClicks < 500"></span>
+            <span id="runa6" [class.oculto]="contadorClicks < 1000"></span>
         </div>
     </div>
 </main>
