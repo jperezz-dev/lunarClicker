@@ -5,14 +5,14 @@ const path = require('path');
 const db = new sqlite3.Database(path.join(app.getPath('userData'), 'database.db'));
 
 db.serialize(() => {
-  db.run("CREATE TABLE IF NOT EXISTS ranking (nombre TEXT, puntuacion INTEGER)");
+  db.run('CREATE TABLE IF NOT EXISTS ranking (nombre TEXT, puntuacion INTEGER)');
 });
 
 ipcMain.on('guardar-puntuacion', (event, datos) => {
-  const stmt = db.prepare("INSERT INTO ranking VALUES (?, ?)");
+  const stmt = db.prepare('INSERT INTO ranking VALUES (?, ?)');
   stmt.run(datos.nombre, datos.puntuacion);
   stmt.finalize();
-  console.log("¡Puntuación guardada!:", datos);
+  console.log('¡Puntuación guardada!:', datos);
 });
 
 function createWindow() {
@@ -23,10 +23,13 @@ function createWindow() {
       nodeIntegration: true,
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
-      nodeIntegration: false
-    }
+      nodeIntegration: false,
+    },
+    icon: './src/favicon.ico',
+    accentColor: '#5e3b8b'
   });
 
+  win.removeMenu();
   win.loadURL(`file://${path.join(__dirname, 'dist/lunar-clicker/browser/index.html')}`);
 }
 
