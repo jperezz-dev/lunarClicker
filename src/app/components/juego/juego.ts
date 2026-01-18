@@ -1,10 +1,11 @@
 import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-juego',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './juego.html',
   styleUrl: './juego.css',
 })
@@ -24,6 +25,9 @@ export class Juego implements OnInit, OnDestroy {
 
   // Sonidos
   sonidoClickLunar = new Audio('./assets/music/sonidoLuna.mp3');
+
+  // Variable de control del modal de guardado
+  mostrarGuardado: boolean = false;
 
   // Opciones del init (Loop, volumen y error)
   ngOnInit() {
@@ -82,5 +86,19 @@ export class Juego implements OnInit, OnDestroy {
         this.cdr.detectChanges();
       });
     }
+  }
+
+  guardarPuntuacionFinal() {
+    const input = document.getElementById('inputNombre') as HTMLInputElement;
+    const nombre = input.value;
+
+    if (nombre.trim() === '') {
+      alert('Debes introducir un nombre para el registro de puntuaciones.');
+      return;
+    }
+
+    const datos = { nombre: nombre, score: this.contadorClicks };
+
+    this.mostrarGuardado = false;
   }
 }

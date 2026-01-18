@@ -20,5 +20,35 @@
             <span id="runa5" [class.oculto]="contadorClicks < 500"></span>
             <span id="runa6" [class.oculto]="contadorClicks < 1000"></span>
         </div>
+        <div id="filtroModalFinPartida" [class.oculto]="tiempoJuego > 1">
+            <div id="modalFinPartida" [class.oculto]="mostrarGuardado">
+                <span class="logo"></span>
+                <p id="textoUno">¡TIEMPO AGOTADO!</p>
+                <p id="textoDos">Tu puntuación ha sido de {{ contadorClicks }} clicks y has desbloqueado las siguientes
+                    runas: </p>
+                <span id="contenedorRunasPuntuacion">
+                    <span id="runa1" [class.oculto]="contadorClicks < 50"></span>
+                    <span id="runa2" [class.oculto]="contadorClicks < 100"></span>
+                    <span id="runa3" [class.oculto]="contadorClicks < 200"></span>
+                    <span id="runa4" [class.oculto]="contadorClicks < 350"></span>
+                    <span id="runa5" [class.oculto]="contadorClicks < 500"></span>
+                    <span id="runa6" [class.oculto]="contadorClicks < 1000"></span>
+                </span>
+                <span id="contenedorBotones">
+                    <button id="botonMenu" routerLink="/menu" class="boton">VOLVER AL MENU</button>
+                    <button id="botonPuntuacion" (click)="mostrarGuardado = true" class="boton">GUARDAR PUNTUACIÓN</button>
+                </span>
+            </div>
+            <div id="modalGuardadoDatos" [class.oculto]="!mostrarGuardado">
+                <p id="textoUno">GUARDADO DE PUNTUACIÓN</p>
+                <p id="textoDos">Introduce tu nombre para el registro de puntuaciones:</p>
+
+                <input type="text" id="inputNombre" placeholder="NOMBRE..." maxlength="10">
+
+                <span id="contenedorBotones">
+                    <button (click)="guardarPuntuacionFinal()" class="boton">CONFIRMAR</button>
+                </span>
+            </div>
+        </div>
     </div>
 </main>

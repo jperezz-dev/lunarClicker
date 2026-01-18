@@ -38,7 +38,7 @@ main {
   width: 80%;
   height: 20%;
   justify-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -179,4 +179,120 @@ main {
 .oculto {
   display: none;
   visibility: hidden;
+}
+
+#filtroModalFinPartida {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modalFinPartida {
+  position: fixed;
+  height: 80%;
+  width: 40%;
+  /*background-color: rgba(128, 88, 178, 0.83);*/
+  background-color: #665d8e;
+  border-radius: 20px;
+  border: solid #3b2853 5px;
+  box-shadow:
+    0px 15px 4px 4px rgba(0, 0, 0, 25%),
+    0px 9px 0px 0px #3b2853;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PressStart2P-Regular';
+  color: white;
+}
+
+.logo {
+  height: 35%;
+}
+
+#textoUno {
+  font-size: 30px;
+  text-align: center;
+}
+
+#textoDos {
+  font-size: 25px;
+  text-align: center;
+}
+
+#contenedorRunasPuntuacion {
+  margin-top: 10%;
+  width: 90%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#contenedorBotones {
+  width: 90%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* Botones */
+.boton {
+  margin-top: 2%;
+  background-color: rgba(128, 88, 178, 0.83);
+  height: 75%;
+  width: 35%;
+  color: white;
+  font-family: 'PressStart2P-Regular';
+  border: solid #5e3b8b 0.2em;
+  font-size: 20px;
+  box-shadow: 0px 15px 4px 4px rgba(0, 0, 0, 25%), 0px 9px 0px 0px #5e3b8b;
+  cursor: pointer;
+}
+
+.boton:hover {
+  transform: scale(1.02);
+}
+
+#modalGuardadoDatos {
+    position: fixed;
+    height: 60%;
+    width: 40%;
+    background-color: #665d8e;
+    border-radius: 20px;
+    border: solid #3b2853 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'PressStart2P-Regular';
+    color: white;
+    box-shadow: 0px 15px 4px 4px rgba(0, 0, 0, 25%), 0px 9px 0px 0px #3b2853;
+}
+
+#inputNombre {
+    width: 80%;
+    height: 15%;
+    background-color: #3b2853;
+    border: solid #5e3b8b 3px;
+    color: #c9c3e6;
+    font-family: 'PressStart2P-Regular';
+    font-size: 20px;
+    text-align: center;
+    outline: none;
+    margin: 20px 0;
+}
+
+#inputNombre:focus {
+    border-color: #8058b2;
+    box-shadow: 0 0 10px #8058b2;
+}
+
+#modalGuardadoDatos #contenedorBotones {
+    height: 20%;
 }
