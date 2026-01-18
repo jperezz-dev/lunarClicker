@@ -35,6 +35,7 @@
     "@angular/ssr": "^21.1.0",
     "express": "^5.1.0",
     "rxjs": "~7.8.0",
+    "sqlite3": "^5.1.7",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
@@ -43,6 +44,7 @@
     "@angular/compiler-cli": "^21.1.0",
     "@types/express": "^5.0.1",
     "@types/node": "^20.17.19",
+    "@types/sqlite3": "^3.1.11",
     "electron": "^39.2.7",
     "jsdom": "^27.1.0",
     "typescript": "~5.9.2",

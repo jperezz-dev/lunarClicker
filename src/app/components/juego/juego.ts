@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,7 +11,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './juego.css',
 })
 export class Juego implements OnInit, OnDestroy {
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(
+    private cdr: ChangeDetectorRef,
+    private router: Router,
+  ) {}
 
   // Numero de clicks
   contadorClicks: number = 0;
@@ -99,6 +103,12 @@ export class Juego implements OnInit, OnDestroy {
 
     const datos = { nombre: nombre, score: this.contadorClicks };
 
+    if ((window as any).electronAPI) {
+      (window as any).electronAPI.guardarPuntuacion(datos);
+      alert('Puntuación guardada en la base de datos.');
+    }
+
     this.mostrarGuardado = false;
+    this.router.navigate(['/menu']);
   }
 }
