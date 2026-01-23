@@ -1,59 +1,57 @@
-# LunarClicker
+# Lunar Clicker
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.0.
+Lunar Clicker es una aplicación de escritorio interactiva desarrollada con Angular y Electron. El proyecto combina una mecánica de juego tipo clicker con una atmósfera mística inspirada en el universo de Lunacid. Los jugadores deben recolectar runas lunares mediante clics precisos antes de que el tiempo se agote, registrando sus hazañas en una base de datos local persistente.
 
-## Development server
+## Características principales:
 
-To start a local development server, run:
+- **Mecánica Clicker Inmersiva:** Sistema de interacción directa con la Luna mediante eventos de puntero, optimizado para una respuesta inmediata y feedback visual (escalado y animaciones de flotación).
 
-```bash
-ng serve
-```
+- **Atmósfera Sonora Dinámica:** Integración de audio que permite solapar sonidos de impacto y una banda sonora ambiental (Sucsarius Phase 2 - Lunacid BSO) que gestiona su estado según la navegación del usuario.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Sistema de Progresión por Runas:** Lógica de desbloqueo basada en hitos de puntuación. Las runas se revelan dinámicamente en la interfaz mediante bindings condicionales de Angular a medida que el jugador alcanza objetivos específicos.
 
-## Code scaffolding
+- **Temporizador de Misión:** Cuenta atrás gestionada mediante intervalos asíncronos con detección de cambios forzada para garantizar una precisión de milisegundos en la interfaz de usuario.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Persistencia de Datos con SQLite:** Integración de una base de datos relacional nativa mediante el proceso principal de Electron, permitiendo el almacenamiento persistente de nombres y puntuaciones de los jugadores.
 
-```bash
-ng generate component component-name
-```
+- **Arquitectura Multiproceso Segura:** Implementación de un puente de comunicación (IPC) mediante un archivo preload, garantizando que la lógica del juego (Renderer) no tenga acceso directo al sistema de archivos, siguiendo las mejores prácticas de seguridad de Electron.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- **Interfaz de Usuario Retro-Moderna:** Diseño UI inspirado en la estética de 32 bits, utilizando fuentes pixel-art, sombras proyectadas y una paleta de colores mística para evocar una experiencia de juego clásica.
 
-```bash
-ng generate --help
-```
+- **Navegación Programática:** Sistema de rutas de Angular (Angular Router) para transiciones fluidas entre el menú principal y la zona de ritual, gestionando la limpieza de procesos (audios y timers) en el ciclo de vida de los componentes.
 
-## Building
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## Diseño en figma:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+[https://www.figma.com/design/1lxjPeaACGYqBKUquRlfE5/lunarClicker?node-id=0-1&t=KVXK79SIHg7o9sV8-1](https://www.figma.com/design/1lxjPeaACGYqBKUquRlfE5/lunarClicker?node-id=0-1&t=KVXK79SIHg7o9sV8-1)
 
-## Running unit tests
+---
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Tecnologías utilizadas:
 
-```bash
-ng test
-```
+- **Framework Frontend:** Angular
+- **Entorno de Escritorio:** Electron
+- **Lenguaje principal:** TypeScript / JavaScript
+- **Base de Datos:** SQLite3 (Persistencia local nativa)
+- **Comunicación:** Electron IPC (Inter-Process Communication)
+  
+---
 
-## Running end-to-end tests
+## Imágenes en ejecución:
 
-For end-to-end (e2e) testing, run:
+### Menú Principal
+![alt text](documentacion/imagen1.png)
 
-```bash
-ng e2e
-```
+## Gameplay
+![alt text](documentacion/imagen2.png)
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Desbloqueo de runas
+![alt text](documentacion/imagen3.png)
 
-## Additional Resources
+## Guardado de puntuaciones
+![alt text](documentacion/imagen4.png)
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Ranking de puntuaciones
+![alt text](documentacion/imagen5.png)
