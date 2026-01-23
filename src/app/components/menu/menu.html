@@ -1,7 +1,7 @@
 <main>
   <div id="contenedor">
     <div id="contenedorSuperior">
-      <span id="iconoPuntuaciones"></span>
+      <span (click)="mostrarRanking()" id="iconoPuntuaciones"></span>
       <span (click)="pausarMusica()" id="iconoSonido" [style.background-image]="musicaSonando 
     ? 'url(assets/images/volumenOn.svg)' 
     : 'url(assets/images/volumenOff.svg)'">
@@ -15,4 +15,16 @@
       <button (click)="cerrarJuego()" id="botonSalir" class="boton">SALIR</button>
     </div>
   </div>
+  <!-- -->
+  <div id="filtroModal" [class.oculto]="!mostrarPuntuaciones">
+    <div id="modalPuntuaciones">
+      <span id="botonCerrar" (click)="cerrarRanking()"></span>
+      <span class="logoPuntuacion"></span>
+      <p id="textoUno">MEJORES PUNTUACIONES</p>
+      <div *ngFor="let item of listaPuntuaciones">
+        <p class="puntuacion">{{ item.nombre }} - {{ item.score }}</p>
+      </div>
+    </div>
+  </div>
+
 </main>

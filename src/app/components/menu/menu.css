@@ -62,7 +62,7 @@ main {
 /* Icono puntuaciones*/
 #iconoPuntuaciones {
   height: 90%;
-  width: 5.5%;
+  width: 5.6%;
   background-image: url(../../../assets/images/puntuaciones.svg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -96,6 +96,69 @@ main {
 #botonSalir {
   width: 34%;
   margin-top: 2%;
+}
+
+.oculto {
+  display: none;
+  visibility: hidden;
+}
+
+#filtroModal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.545);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modalPuntuaciones {
+  position: fixed;
+  height: 80%;
+  width: 40%;
+  background-color: #665d8e;
+  border: solid #3b2853 5px;
+  box-shadow:
+    0px 15px 4px 4px rgba(0, 0, 0, 25%),
+    0px 9px 0px 0px #3b2853;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'PressStart2P-Regular';
+  color: white;
+}
+
+#botonCerrar {
+  height: 5%;
+  width: 5%;
+  align-self: flex-end;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../../../assets/images/cerrarIcono.svg);
+  cursor: pointer;
+}
+
+.logoPuntuacion {
+  margin-top: 5%;
+  height: 35%;
+  background-position: center;
+  width: 65%;
+  background-image: url(../../../assets/images/logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: float 6s ease-in-out infinite;
+}
+
+#textoUno {
+  font-size: 30px;
+  text-align: center;
+}
+
+.puntuacion {
+  font-size: 30px;
+  text-align: center;
 }
 
 @media (min-width: 2500px) {

@@ -20,7 +20,7 @@ export class Juego implements OnInit, OnDestroy {
   contadorClicks: number = 0;
 
   // Tiempo de juego
-  tiempoJuego: number = 120;
+  tiempoJuego: number = 30;
   intervalo: any;
 
   // Definición de la música
@@ -105,7 +105,6 @@ export class Juego implements OnInit, OnDestroy {
 
     if ((window as any).electronAPI) {
       (window as any).electronAPI.guardarPuntuacion(datos);
-      alert('Puntuación guardada en la base de datos.');
     }
 
     this.mostrarGuardado = false;
